@@ -1,0 +1,595 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* General Styles */
+body {
+  background-color: black;
+  color: #fff;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.DashboardBody {
+  background-color: black;
+  height: 100%;
+  min-width: 100%;
+}
+
+/* Navbar */
+/* Navbar styles */
+.navbar {
+  position: fixed;
+  background: black;
+  width: 100%;
+  height: 110px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  z-index: 1000;
+}
+
+/* Logo styles */
+.Logo img {
+  width: 63px;
+  height: auto;
+  margin-left: 80px; /* Adjust as needed */
+}
+
+/* Links container (default state for larger screens) */
+.links {
+  display: flex;
+  gap: 2rem;
+  margin-right: 100px; /* Space for the links */
+}
+
+.links li {
+  list-style: none;
+}
+
+.links li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  padding: 15px;
+  border-radius: 50px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.links li a:hover {
+  background: #857d7d;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  /* Ensure logo and burger menu appear side by side */
+  .navbar {
+    display: flex;
+    justify-content: space-between; /* Space between logo and burger */
+    align-items: center;
+    padding: 0 20px;
+  }
+
+  .Logo img {
+    margin-right: 99px; /* Remove the large left margin on smaller screens */
+  }
+
+  /* Display the burger menu icon */
+  .navbar .burger-menu {
+    display: block; /* Show the burger menu on smaller screens */
+    cursor: pointer;
+    font-size: 30px;
+    color: white;
+    margin-right: 20px; /* Adjust the space between burger and the right side */
+  }
+
+  /* Align logo and burger menu side by side */
+  .navbar {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* Remove margin-right for the links container on smaller screens */
+  .navbar .links {
+    display: none; /* Hide links by default */
+    flex-direction: column;
+    position: absolute;
+    top: 88px; /* Just below the navbar */
+    left: 0;
+    background-color: #333;
+    width: 100%;
+    padding: 0; /* Remove padding */
+  }
+
+  /* Show links when the burger menu is clicked */
+  .navbar .links.open {
+    display: flex;
+  }
+
+  /* Style each link inside the navbar */
+  .navbar .links li {
+    list-style: none;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .navbar .links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+  }
+
+  .navbar .links a:hover {
+    background-color: #444;
+  }
+}
+
+/* Hide the burger menu on larger screens */
+@media screen and (min-width: 769px) {
+  .navbar .burger-menu {
+    display: none; /* Hide the burger menu on larger screens */
+  }
+}
+
+
+
+/* HOME */
+.wrapper-home {
+  margin-top: 190px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5rem;
+}
+
+.profile-home img {
+  width: 100%;
+  max-width: 400px;
+  object-fit: cover;
+  margin-left: 50px;
+}
+
+.intro-home {
+  font-family: "New Rocker", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+}
+
+/* About */
+.SectionOfAbout {
+  width: 100%;
+  height: 100%;
+  padding: 95px 0;
+}
+
+.DivOfAbout {
+  width: 1130px;
+  max-width: 95%;
+  height: 589px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.ContentOfAbout h1 {
+  font-family: "New Rocker", system-ui;
+  color: white;
+  font-size: 80px;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+
+.ContentOfAbout h4 {
+  color: white;
+  font-size: 22px;
+}
+
+.ContentOfAbout h5 {
+  color: white;
+  font-size: 25px;
+  text-transform: capitalize;
+}
+
+.ContentOfAbout span {
+  color: #f9004d;
+}
+
+.ContentOfAbout p {
+  font-family: "Bebas Neue", sans-serif;
+  color: white;
+  letter-spacing: 1px;
+  line-height: 28px;
+  font-size: 18px;
+  margin-bottom: 45px;
+}
+
+.profile img {
+  width: 100%;
+  max-width: 400px;
+  object-fit: cover;
+  vertical-align: middle;
+  border-radius: 10%;
+}
+
+.wrapper {
+  margin-top: 130px;
+  padding: 0 15px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  gap: 5rem;
+}
+
+.wrappers {
+  padding: 0 15px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  gap: 5rem;
+}
+
+.intro {
+  flex: 1;
+}
+
+/* Footer */
+.Footer2 {
+  margin-top: 330px;
+  background-color: rgb(27, 26, 26);
+  color: #fff;
+  padding: 30px;
+  text-align: center;
+}
+
+.ft {
+  letter-spacing: 2px;
+}
+
+/* Dream */
+.dreams h1 {
+  font-family: "New Rocker", system-ui;
+  margin-top: 200px;
+  color: white;
+  font-size: 80px;
+  text-transform: capitalize;
+  margin-bottom: 11px;
+  text-align: center;
+}
+
+.dreams span {
+  color: #f9004d;
+}
+
+.dream-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.dream-card {
+  width: 325px;
+  background-color: gray;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  margin: 20px;
+}
+
+.dream-card img {
+  width: 100%;
+  height: auto;
+}
+
+.dream-content {
+  padding: 16px;
+}
+
+.dream-content h3 {
+  font-family: "New Rocker", system-ui;
+  color: rgb(238, 238, 238);
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.dream-content p {
+  font-family: "Bebas Neue", sans-serif;
+  color: white;
+  font-size: 15px;
+  line-height: 1.3;
+}
+
+/* Skills */
+.skills img {
+  margin-top: 200px;
+  width: 100%;
+  max-width: 400px;
+  object-fit: cover;
+}
+
+.info {
+  flex: 1;
+}
+
+/* Media Queries for Mobile & Tablets */
+@media (max-width: 1024px) {
+  .navbar {
+      padding: 0 20px;
+  }
+
+  .wrapper-home {
+      margin-top: 160px;
+      gap: 3rem;
+  }
+
+  .profile-home img {
+      max-width: 300px;
+  }
+
+  .wrapper {
+      gap: 3rem;
+  }
+
+  .ContentOfAbout h1 {
+      font-size: 60px;
+  }
+
+  .dream-container {
+      justify-content: flex-start;
+  }
+
+  .dream-card {
+      width: 45%;
+  }
+
+  .skills img {
+      max-width: 300px;
+  }
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .navbar {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: auto;
+  }
+
+  .links {
+      display: none;
+      flex-direction: column;
+      margin-top: 20px;
+  }
+
+  .navbar.open .links {
+      display: flex;
+  }
+
+  .wrapper-home {
+      margin-top: 150px;
+      flex-direction: column;
+      text-align: center;
+      gap: 2rem;
+  }
+
+  .profile-home img {
+      max-width: 250px;
+  }
+
+  .intro-home h1 {
+      font-size: 2.5rem;
+  }
+
+  .ContentOfAbout {
+      flex-direction: column;
+      text-align: center;
+      gap: 2rem;
+  }
+
+  .profile img {
+      max-width: 300px;
+  }
+
+  .dream-card {
+      width: 100%;
+  }
+
+  .dream-content h3 {
+      font-size: 24px;
+  }
+
+  .dream-content p {
+      font-size: 14px;
+  }
+
+  .skills img {
+      max-width: 250px;
+  }
+
+  .Footer2 {
+      padding: 20px;
+  }
+}
+
+/* For small mobile devices */
+@media (max-width: 480px) {
+  .navbar {
+      padding: 10px;
+  }
+
+  .Logo img {
+      width: 60px;
+      height: 60px;
+  }
+
+  .links li a {
+      font-size: 0.8rem;
+      padding: 10px;
+  }
+
+  .intro-home h1 {
+      font-size: 2rem;
+  }
+
+  .ContentOfAbout h1 {
+      font-size: 50px;
+  }
+
+  .dreams h1 {
+      font-size: 60px;
+  }
+
+  .dream-content p {
+      font-size: 12px;
+  }
+}
+
+/*CONTACT*/
+
+.contact-form {
+  margin-top: 330px;
+  position: relative;
+  min-height: 100vh;
+  z-index: 0;
+  padding: 30px;
+  justify-content: center;
+  display: grid;
+  grid-template-rows: 1fr auto 1fr;
+  align-items: center;
+}
+
+.contact-container {
+  max-width: 700px;
+  margin-bottom: 100px;
+}
+
+.contact-form h1 {
+  text-align: center;
+  font-weight: 400;
+  color: #fff;
+}
+
+.contact-form h2 {
+  line-height: 40px;
+  margin-bottom: 5px;
+  font-size: 30px;
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
+}
+
+.contact-form .main {
+  position: relative;
+  display: flex;
+  margin: 30px 0;
+}
+
+.contact-content {
+  flex-basis: 50%;
+  padding: 3em 3em;
+  background: gray;
+  box-shadow: 2px 9px 49px -17px rgba(0,0,0,0.1);
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.form-img {
+  flex-basis: 50%;
+  background: #636161;
+  background-size: cover;
+  padding: 40px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  display: grid;
+}
+
+.form-img h3{
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.form-img p {
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.form-img i {
+  color: #f9004d;
+  margin-right: 10px;
+}
+
+.btn, button, input{
+  border-radius: 35px;
+}
+
+.btn:hover,button:hover {
+  color: #642a3e;
+  transition: 0.5s ease;
+}
+
+.contact-form form {
+  margin: 30px 0;
+}
+
+.contact-form input, textarea {
+  font-family: "Bebas Neue", sans-serif;
+  outline: none;
+  margin-bottom: 15px;
+  font-stretch: 16px;
+  background: rgb(248, 247, 247);
+  color: gray;
+  padding: 14px 20px;
+  width: 100%;
+  display: inline-block;
+  box-sizing: border-box;
+  border: none;
+  transition: 0.3s ease;
+}
+
+.contact-form input:focus {
+  background: #fff;
+  border: 1px solid #f9004d;
+}
+
+.contact-form button {
+  font-size: 18px;
+  color: #fff;
+  width: 100%;
+  background: #f9004d;
+  font-weight: 600;
+  transition: 0.3s ease;
+  padding: 14px 15px;
+}
+
+@media(max-width:736px) {
+  .contact-form .main {
+    flex-direction: column;
+  }
+  .contact-form form {
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  .form-img {
+    border-radius: 0;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    order: 2;
+  }
+  .contact-content {
+    order: 1;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+}
