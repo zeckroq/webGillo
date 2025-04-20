@@ -139,8 +139,6 @@ body {
   }
 }
 
-
-
 /* HOME */
 .wrapper-home {
   margin-top: 190px;
@@ -153,7 +151,7 @@ body {
   width: 100%;
   max-width: 400px;
   object-fit: cover;
-  margin-left: 50px;
+  margin-left: 15px;
 }
 
 .intro-home {
