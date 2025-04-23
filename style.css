@@ -79,7 +79,8 @@ body {
   }
 
   .Logo img {
-    margin-right: 99px; /* Remove the large left margin on smaller screens */
+    margin-top: 10px;
+    margin-right: 250px; /* Remove the large left margin on smaller screens */
   }
 
   /* Display the burger menu icon */
@@ -88,7 +89,7 @@ body {
     cursor: pointer;
     font-size: 30px;
     color: white;
-    margin-right: 20px; /* Adjust the space between burger and the right side */
+    margin-right: 220px; /* Adjust the space between burger and the right side */
   }
 
   /* Align logo and burger menu side by side */
@@ -98,12 +99,12 @@ body {
   }
 
   /* Remove margin-right for the links container on smaller screens */
-  .navbar .links {
+  .navbar .links {  
+    margin-right: 120px;
     display: none; /* Hide links by default */
     flex-direction: column;
     position: absolute;
     top: 88px; /* Just below the navbar */
-    left: 0;
     background-color: #333;
     width: 100%;
     padding: 0; /* Remove padding */
@@ -141,7 +142,7 @@ body {
 
 /* HOME */
 .wrapper-home {
-  margin-top: 190px;
+  margin-top: 170px;
   flex-wrap: wrap;
   justify-content: center;
   gap: 5rem;
@@ -254,10 +255,9 @@ body {
   letter-spacing: 2px;
 }
 
-/* Dream */
+/* Works */
 .dreams h1 {
   font-family: "New Rocker", system-ui;
-  margin-top: 200px;
   color: white;
   font-size: 80px;
   text-transform: capitalize;
@@ -309,7 +309,6 @@ body {
 
 /* Skills */
 .skills img {
-  margin-top: 200px;
   width: 100%;
   max-width: 400px;
   object-fit: cover;
@@ -358,7 +357,7 @@ body {
 /* Mobile Adjustments */
 @media (max-width: 768px) {
   .navbar {
-      flex-direction: column;
+      margin-left: 50px;
       align-items: center;
       justify-content: center;
       height: auto;
@@ -417,39 +416,6 @@ body {
 
   .Footer2 {
       padding: 20px;
-  }
-}
-
-/* For small mobile devices */
-@media (max-width: 480px) {
-  .navbar {
-      padding: 10px;
-  }
-
-  .Logo img {
-      width: 60px;
-      height: 60px;
-  }
-
-  .links li a {
-      font-size: 0.8rem;
-      padding: 10px;
-  }
-
-  .intro-home h1 {
-      font-size: 2rem;
-  }
-
-  .ContentOfAbout h1 {
-      font-size: 50px;
-  }
-
-  .dreams h1 {
-      font-size: 60px;
-  }
-
-  .dream-content p {
-      font-size: 12px;
   }
 }
 
@@ -591,3 +557,113 @@ body {
     border-top-right-radius: 8px;
   }
 }
+
+/* Adjust all major containers to wrap and scale properly */
+@media (max-width: 1024px) {
+  .DivOfAbout {
+    flex-direction: column;
+    height: auto;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .ContentOfAbout h1 {
+    font-size: 60px;
+  }
+
+  .dream-container {
+    justify-content: center;
+  }
+
+  .dream-card {
+    width: 45%;
+  }
+
+  .skills img {
+    max-width: 300px;
+  }
+
+  .wrapper,
+  .wrappers {
+    flex-direction: column;
+    gap: 3rem;
+    text-align: center;
+  }
+}
+
+/* Tablet and Mobile Responsive */
+@media (max-width: 768px) {
+  .dream-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .dream-card {
+    width: 90%;
+    margin: 10px 0;
+  }
+
+  .dreams h1 {
+    font-size: 50px;
+  }
+
+  .ContentOfAbout h1,
+  .intro-home h1 {
+    font-size: 48px;
+  }
+
+  .DivOfAbout {
+    padding: 40px 0;
+    gap: 2rem;
+  }
+
+  .skills img {
+    max-width: 250px;
+  }
+
+  .wrapper-home {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 150px;
+    text-align: center;
+  }
+
+  .profile-home img {
+    max-width: 250px;
+  }
+
+  .Footer2 {
+    padding: 20px;
+    font-size: 14px;
+  }
+}
+
+/* For small mobile devices */
+@media (max-width: 480px) {
+  .dreams h1,
+  .ContentOfAbout h1 {
+    font-size: 40px;
+  }
+
+  .dream-content h3 {
+    font-size: 22px;
+  }
+
+  .dream-content p {
+    font-size: 13px;
+  }
+
+  .profile img,
+  .skills img,
+  .profile-home img {
+    max-width: 90%;
+  }
+
+  .contact-form h1,
+  .contact-form h2 {
+    font-size: 24px;
+  }
+}
+
